@@ -1,0 +1,184 @@
+.opening-hours-section {
+  padding: 100px 0;
+  background: #f7f2f8;
+}
+
+.opening-hours-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 60px;
+}
+
+.section-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c89a63;
+  margin-bottom: 12px;
+}
+
+.opening-hours-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: rgb(77, 57, 84);
+  margin-bottom: 16px;
+}
+
+.section-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #6f6175;
+  margin: 0;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.location-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 32px;
+  border: 1px solid rgba(77, 57, 84, 0.08);
+  box-shadow: 0 20px 45px rgba(77, 57, 84, 0.08);
+}
+
+.location-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.location-status::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+}
+
+.status-open {
+  background: rgba(76, 144, 91, 0.12);
+  color: #2f7a3f;
+}
+
+.status-open::before {
+  background: #2f7a3f;
+}
+
+.status-closed {
+  background: rgba(184, 76, 76, 0.12);
+  color: #a23e3e;
+}
+
+.status-closed::before {
+  background: #a23e3e;
+}
+
+.location-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(77, 57, 84);
+  margin-bottom: 14px;
+}
+
+.location-address {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #6f6175;
+  margin-bottom: 16px;
+}
+
+.location-note {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #4f4456;
+  background: rgba(77, 57, 84, 0.05);
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+}
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(77, 57, 84, 0.08);
+  font-family: 'Poppins', sans-serif;
+  color: #4f4456;
+}
+
+.hours-list li:last-child {
+  border-bottom: none;
+}
+
+.location-actions {
+  margin-top: auto;
+}
+
+.btn-location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: rgb(77, 57, 84);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-location:hover {
+  background: #63466d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .opening-hours-section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .opening-hours-header h2 {
+    font-size: 2rem;
+  }
+
+  .location-card {
+    padding: 24px;
+    border-radius: 22px;
+  }
+
+  .hours-list li {
+    font-size: 0.95rem;
+  }
+}

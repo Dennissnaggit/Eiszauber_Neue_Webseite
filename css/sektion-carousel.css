@@ -1,0 +1,246 @@
+.hero-slide {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(77,57,84,0.85) 0%,
+      rgba(77,57,84,0.5) 30%,
+      rgba(77,57,84,0.9) 100%
+    ),
+    url(../assets/Slider/Hintergrund-Grafik-v3.jpg);
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.15) 22%,
+    rgba(0, 0, 0, 0.08) 40%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  z-index: 0;
+}
+
+/* Minze hinten */
+.hero-img-back {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 80%;
+  z-index: 0;
+  opacity: 0;
+  animation: mintFade 1.6s ease-out forwards;
+}
+
+/* Eis mittig */
+.hero-img-main {
+  position: absolute;
+  right: 18%;
+  top: 55%;
+  transform: translateY(-50%);
+  max-height: 48%;
+  z-index: 1;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4));
+  opacity: 0;
+  animation: iceIn 1s ease-out 0.3s forwards;
+  filter: 
+    drop-shadow(0 20px 30px rgba(0,0,0,0.4))
+    saturate(1.05)
+    contrast(1.05);
+}
+
+/* Kelle vorne */
+.hero-img-top {
+  position: absolute;
+  right: 20%;
+  top: 15%;
+  max-width: 260px;
+  z-index: 2;
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+  opacity: 0;
+  animation: scoopIn 1s ease-out 0.7s forwards;
+}
+
+/* Text */
+.hero-caption {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 520px;
+  z-index: 4;
+}
+
+.hero-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffcf87;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hero-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  color: #d6cde0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-caption h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-caption h3 {
+  color: #ffcf87;
+  margin-bottom: 15px;
+}
+
+.hero-caption p {
+  color: #d6cde0;
+}
+
+.btn-primary {
+  background: #e6a96d;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: #2b1f30;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #d18d4f;
+  transform: translateY(-2px);
+}
+
+/* Keyframes */
+@keyframes mintFade {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes iceIn {
+  from {
+    opacity: 0;
+    transform: translate(60px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes scoopIn {
+  from {
+    opacity: 0;
+    transform: translateY(-60px) rotate(-25deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-12deg);
+  }
+}
+
+@keyframes textUp {
+  from {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+.hero-img-main {
+  position: absolute;
+  right: 18%;
+  top: 55%;
+  max-height: 48%;
+  z-index: 1;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4));
+  opacity: 0;
+  animation:
+    iceIn 1s ease-out 0.3s forwards,
+    iceFloat 4s ease-in-out 1.4s infinite;
+}
+
+.hero-img-top {
+  position: absolute;
+  right: 20%;
+  top: 15%;
+  max-width: 260px;
+  z-index: 2;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+  opacity: 0;
+  animation:
+    scoopIn 1s ease-out 0.7s forwards,
+    scoopFloat 5s ease-in-out 1.8s infinite;
+}
+
+@keyframes iceFloat {
+  0%   { transform: translate(0, -50%); }
+  50%  { transform: translate(0, calc(-50% - 10px)); }
+  100% { transform: translate(0, -50%); }
+}
+
+@keyframes scoopFloat {
+  0%   { transform: translateY(0) rotate(-12deg); }
+  50%  { transform: translateY(-8px) rotate(-9deg); }
+  100% { transform: translateY(0) rotate(-12deg); }
+}
+
+@media (max-width: 768px) {
+  .hero-img-back {
+    display: none;
+  }
+
+  .hero-img-main {
+    right: 50%;
+    transform: translate(50%, -50%);
+    max-height: 40%;
+  }
+
+  .hero-img-top {
+    display: none;
+  }
+
+  .hero-caption {
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .hero-caption h1 {
+    font-size: 2rem;
+  }
+}
