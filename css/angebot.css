@@ -1,0 +1,106 @@
+.angebot {
+  position: relative;
+  padding: 120px 20px;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(247, 242, 248, 1) 0%,
+      rgba(247, 242, 248, 0.7) 3%,
+      rgba(77, 57, 84, 0.75) 28%,
+      rgba(77, 57, 84, 0.92) 100%
+    ),
+    url(../assets/Angebote/Hintergrund-Milanos.jpg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.angebot-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+.angebot-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.angebot-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.12);
+}
+.angebot-card img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 22px;
+}
+.angebot-card img {
+  width: 110px;
+}
+.angebot-card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.angebot-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 24px;
+}
+.angebot-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #e6a96d;
+  color: #2b1f30;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.angebot-btn:hover {
+  background: #d79557;
+  color: #2b1f30;
+  transform: translateY(-2px);
+}
+@media (max-width: 1199px) {
+  .angebot-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .angebot {
+    padding: 90px 20px;
+  }
+
+  .angebot-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .angebot-card {
+    padding: 28px 22px;
+    border-radius: 22px;
+  }
+}
