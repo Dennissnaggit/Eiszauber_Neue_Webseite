@@ -1,57 +1,199 @@
-header {
-  position: absolute;
+.site-header {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
 }
 
-.navbar {
+.custom-navbar {
+  padding: 18px 0;
   background: transparent;
-  padding: 0;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
 }
 
-.navbar-collapse {
+.navbar-container {
   max-width: 1440px;
-  margin: 18px auto;
-  display: flex;
+  padding-left: 24px;
+  padding-right: 24px;
   align-items: center;
-  justify-content: space-between;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
   padding: 0;
+  margin-right: 24px;
 }
 
-.navbar-nav {
-  font-size: 16px;
-  gap: 18px;
+.navbar-brand img {
+  display: block;
+  width: 110px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22));
+  transition: transform 0.3s ease;
 }
 
-.navbar .nav-link {
-  color: #f3eafc;
+.navbar-brand:hover img {
+  transform: scale(1.03);
+}
+
+.custom-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.custom-nav .nav-link {
+  position: relative;
+  padding: 10px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.98rem;
   font-weight: 500;
+  color: #f3eafc;
   transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
+.custom-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 4px;
+  width: calc(100% - 32px);
+  height: 2px;
+  background: #ffcf87;
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.custom-nav .nav-link:hover,
+.custom-nav .nav-link.active {
   color: #ffcf87;
 }
 
-.navbar-toggler {
-  border: none;
+.custom-nav .nav-link:hover::after,
+.custom-nav .nav-link.active::after {
+  transform: scaleX(1);
 }
 
-.navbar-toggler:focus {
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #e6a96d;
+  color: #2b1f30;
+  transform: translateY(-2px);
+}
+
+/* Scroll Zustand */
+.custom-navbar.scrolled {
+  padding: 12px 0;
+  background: rgba(77, 57, 84, 0.82);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px rgba(44, 28, 50, 0.18);
+}
+
+.custom-navbar.scrolled .nav-cta {
+  background: #e6a96d;
+  border-color: transparent;
+  color: #2b1f30;
+}
+
+.custom-navbar.scrolled .nav-cta:hover {
+  background: #d79557;
+}
+
+/* Toggler */
+.custom-toggler {
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.custom-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.custom-toggler:focus {
   box-shadow: none;
 }
-.navbar-brand img {
-  display: block;
-  width: 100px;
-  height: auto;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+
+@media (max-width: 991px) {
+  .custom-toggler {
+    display: flex;
+  }
+
+  .navbar-collapse {
+    margin-top: 18px;
+    background: rgba(77, 57, 84, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(32, 20, 37, 0.2);
+  }
+
+  .custom-nav {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .custom-nav .nav-link {
+    width: 100%;
+    padding: 12px 6px;
+  }
+
+  .custom-nav .nav-link::after {
+    display: none;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-navbar {
+    padding: 14px 0;
+  }
+
+  .navbar-brand img {
+    width: 92px;
+  }
+
+  .navbar-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }

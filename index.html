@@ -17,8 +17,9 @@
     <link rel="stylesheet" href="./css/torten.css" />
     <link rel="stylesheet" href="./css/bewertung.css" />
     <link rel="stylesheet" href="./css/team.css" />
-    <link rel="stylesheet" href="./css/kontaktformular.css">
+    <link rel="stylesheet" href="./css/kontaktformular.css" />
     <script src="./js/opening.js"></script>
+    <script src="./js/main.js"></script>
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -27,36 +28,38 @@
     <title>Eiszauber</title>
   </head>
   <body onload="updateLocationStatus()">
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container navbar-container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assets/Logo-Milanos-Eiszauber.png"
+              alt="Milanos Eiszauber"
+            />
+          </a>
+
           <button
-            class="navbar-toggler"
+            class="navbar-toggler custom-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup"
             aria-expanded="false"
-            aria-label="Toggle navigation"
+            aria-label="Navigation umschalten"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                <img
-                  src="./assets/Logo-Milanos-Eiszauber.png"
-                  alt="Bootstrap"
-                  width="100"
-                  height=""
-                />
-              </a>
-            </div>
-            <div class="navbar-nav">
+            <div class="navbar-nav ms-auto custom-nav">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Pricing</a>
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#">Über uns</a>
+              <a class="nav-link" href="#angebot">Angebote</a>
+              <a class="nav-link" href="#">Galerie</a>
+              <a class="nav-link" href="#">Kontakt</a>
+              <a class="nav-cta" href="#kontakt">Jetzt anfragen</a>
             </div>
           </div>
         </div>
@@ -189,6 +192,14 @@
               >
                 Route planen
               </a>
+
+              <a
+                href="/assets/speisekarte/MilanoEiskarte.pdf"
+                target="_blank"
+                class="btn-menu"
+              >
+                Speisekarte ansehen
+              </a>
             </div>
           </div>
 
@@ -250,7 +261,7 @@
         </p>
       </div>
     </section>
-    <section class="angebot">
+    <section class="angebot" id="angebot">
       <div class="angebot-inner container">
         <div class="angebot-card">
           <img src="./assets/Angebote/Eisbecher-Milanos.svg" alt="Eisbecher" />
@@ -513,114 +524,156 @@
         </div>
       </div>
     </section>
-    <section class="kontaktformular">
-  <div class="container">
-    <div class="kontaktformular-header">
-      <p class="section-label">Wir freuen uns auf Ihre Anfrage</p>
-      <h2>Kontakt aufnehmen</h2>
-      <p class="section-text">
-        Sie planen eine Bestellung oder ein Event? Senden Sie uns Ihre Anfrage
-        bequem über das Formular. Wir melden uns schnellstmöglich bei Ihnen zurück.
-      </p>
-    </div>
-
-    <form class="contact-form" action="#" method="post">
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="vorname">Vorname <span>*</span></label>
-          <input type="text" id="vorname" name="vorname" required>
+    <section class="kontaktformular" id="kontakt">
+      <div class="container">
+        <div class="kontaktformular-header">
+          <p class="section-label">Wir freuen uns auf Ihre Anfrage</p>
+          <h2>Kontakt aufnehmen</h2>
+          <p class="section-text">
+            Sie planen eine Bestellung oder ein Event? Senden Sie uns Ihre
+            Anfrage bequem über das Formular. Wir melden uns schnellstmöglich
+            bei Ihnen zurück.
+          </p>
         </div>
 
-        <div class="form-group">
-          <label for="nachname">Nachname <span>*</span></label>
-          <input type="text" id="nachname" name="nachname" required>
-        </div>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="vorname">Vorname <span>*</span></label>
+              <input type="text" id="vorname" name="vorname" required />
+            </div>
 
-        <div class="form-group">
-          <label for="email">E-Mail <span>*</span></label>
-          <input type="email" id="email" name="email" required>
-        </div>
+            <div class="form-group">
+              <label for="nachname">Nachname <span>*</span></label>
+              <input type="text" id="nachname" name="nachname" required />
+            </div>
 
-        <div class="form-group">
-          <label for="telefon">Telefon <span>*</span></label>
-          <input type="tel" id="telefon" name="telefon" required>
-        </div>
+            <div class="form-group">
+              <label for="email">E-Mail <span>*</span></label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-        <div class="form-group">
-          <label for="veranstaltungsort">Veranstaltungsort <span>*</span></label>
-          <input type="text" id="veranstaltungsort" name="veranstaltungsort" required>
-        </div>
+            <div class="form-group">
+              <label for="telefon">Telefon <span>*</span></label>
+              <input type="tel" id="telefon" name="telefon" required />
+            </div>
 
-        <div class="form-group">
-          <label for="personenanzahl">Personen Anzahl <span>*</span></label>
-          <input type="number" id="personenanzahl" name="personenanzahl" min="1" required>
-        </div>
-      </div>
+            <div class="form-group">
+              <label for="veranstaltungsort"
+                >Veranstaltungsort <span>*</span></label
+              >
+              <input
+                type="text"
+                id="veranstaltungsort"
+                name="veranstaltungsort"
+                required
+              />
+            </div>
 
-      <div class="form-options-grid">
-        <div class="form-option-box">
-          <p class="option-title">Art der Anfrage <span>*</span></p>
-          <div class="option-list">
-            <label class="custom-option">
-              <input type="radio" name="lieferart" value="Selbstabholer" required>
-              <span>Selbstabholer</span>
-            </label>
-
-            <label class="custom-option">
-              <input type="radio" name="lieferart" value="Transport" required>
-              <span>Transport</span>
-            </label>
+            <div class="form-group">
+              <label for="personenanzahl">Personen Anzahl <span>*</span></label>
+              <input
+                type="number"
+                id="personenanzahl"
+                name="personenanzahl"
+                min="1"
+                required
+              />
+            </div>
           </div>
-        </div>
 
-        <div class="form-option-box">
-          <p class="option-title">Thema <span>*</span></p>
-          <div class="option-list option-list-wrap">
-            <label class="custom-option">
-              <input type="radio" name="thema" value="Allgemeines" required>
-              <span>Allgemeines</span>
-            </label>
+          <div class="form-options-grid">
+            <div class="form-option-box">
+              <p class="option-title">Art der Anfrage <span>*</span></p>
+              <div class="option-list">
+                <label class="custom-option">
+                  <input
+                    type="radio"
+                    name="lieferart"
+                    value="Selbstabholer"
+                    required
+                  />
+                  <span>Selbstabholer</span>
+                </label>
 
-            <label class="custom-option">
-              <input type="radio" name="thema" value="Eistorten" required>
-              <span>Eistorten</span>
-            </label>
+                <label class="custom-option">
+                  <input
+                    type="radio"
+                    name="lieferart"
+                    value="Transport"
+                    required
+                  />
+                  <span>Transport</span>
+                </label>
+              </div>
+            </div>
 
-            <label class="custom-option">
-              <input type="radio" name="thema" value="Eiswagen" required>
-              <span>Eiswagen</span>
-            </label>
+            <div class="form-option-box">
+              <p class="option-title">Thema <span>*</span></p>
+              <div class="option-list option-list-wrap">
+                <label class="custom-option">
+                  <input
+                    type="radio"
+                    name="thema"
+                    value="Allgemeines"
+                    required
+                  />
+                  <span>Allgemeines</span>
+                </label>
 
-            <label class="custom-option">
-              <input type="radio" name="thema" value="Eisthekenverleih" required>
-              <span>Eisthekenverleih</span>
-            </label>
+                <label class="custom-option">
+                  <input type="radio" name="thema" value="Eistorten" required />
+                  <span>Eistorten</span>
+                </label>
+
+                <label class="custom-option">
+                  <input type="radio" name="thema" value="Eiswagen" required />
+                  <span>Eiswagen</span>
+                </label>
+
+                <label class="custom-option">
+                  <input
+                    type="radio"
+                    name="thema"
+                    value="Eisthekenverleih"
+                    required
+                  />
+                  <span>Eisthekenverleih</span>
+                </label>
+              </div>
+            </div>
           </div>
-        </div>
+
+          <div class="form-group form-group-full">
+            <label for="nachricht">Nachricht</label>
+            <textarea
+              id="nachricht"
+              name="nachricht"
+              rows="6"
+              placeholder="Schreiben Sie uns hier Ihre Nachricht ..."
+            ></textarea>
+          </div>
+
+          <div class="form-footer">
+            <label class="privacy-check">
+              <input type="checkbox" name="datenschutz" required />
+              <span>
+                Ich habe die Datenschutzhinweise gelesen und stimme der
+                Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.
+                <span>*</span>
+              </span>
+            </label>
+
+            <p class="privacy-note">
+              Pflichtfelder sind mit <span>*</span> gekennzeichnet.
+            </p>
+
+            <button type="submit" class="contact-submit-btn">
+              Anfrage abschicken
+            </button>
+          </div>
+        </form>
       </div>
-
-      <div class="form-group form-group-full">
-        <label for="nachricht">Nachricht</label>
-        <textarea id="nachricht" name="nachricht" rows="6" placeholder="Schreiben Sie uns hier Ihre Nachricht ..."></textarea>
-      </div>
-
-      <div class="form-footer">
-        <label class="privacy-check">
-          <input type="checkbox" name="datenschutz" required>
-          <span>
-            Ich habe die Datenschutzhinweise gelesen und stimme der Verarbeitung
-            meiner Daten zur Bearbeitung meiner Anfrage zu. <span>*</span>
-          </span>
-        </label>
-
-        <p class="privacy-note">
-          Pflichtfelder sind mit <span>*</span> gekennzeichnet.
-        </p>
-
-        <button type="submit" class="contact-submit-btn">Anfrage abschicken</button>
-      </div>
-    </form>
-  </div>
-</section>
+    </section>
   </body>
 </html>

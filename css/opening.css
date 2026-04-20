@@ -158,6 +158,41 @@
   transform: translateY(-2px);
 }
 
+.btn-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  background: #e6a96d; /* 🔥 dein Goldton */
+  color: #2b1f30;
+
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.btn-menu:hover {
+  background: #d79557;
+  color: #2b1f30;
+  transform: translateY(-2px);
+}
+
+.location-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .location-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 991px) {
   .locations-grid {
     grid-template-columns: 1fr;
