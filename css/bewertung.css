@@ -1,0 +1,78 @@
+.bewertung {
+  position: relative;
+  padding: 120px 20px;
+  overflow: hidden;
+
+  background-image: url(../assets/Slider/Hintergrund-Grafik-v3.jpg);
+
+  background-size: cover;
+  background-position: center;
+}
+.rating-overall {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.bewertung-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.bewertung-header h3 {
+  color: #e6a96d;
+  font-family: "Poppins";
+  margin-bottom: 10px;
+}
+
+.bewertung-header h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: "Poppins";
+}
+.bewertung-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.bewertung-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  color: #fff !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+.bewertung-card p {
+  color: white !important;
+}
+
+.bewertung-card:hover {
+  transform: translateY(-5px);
+}
+.bewertung-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.google-icon {
+  background: #fff;
+  color: #4285f4;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.stars {
+  color: #ffd700;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+@media (max-width: 991px) {
+  .bewertung-grid {
+    grid-template-columns: 1fr;
+  }
+}
