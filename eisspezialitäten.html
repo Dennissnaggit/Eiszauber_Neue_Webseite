@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eisspezialitäten</title>
+     <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/Eispezialitäten/hero-eisspezialitäten.css">
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container navbar-container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assets/Logo-Milanos-Eiszauber.png"
+              alt="Milanos Eiszauber"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler custom-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Navigation umschalten"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto custom-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Über uns</a>
+              <a class="nav-link" href="#angebot">Angebote</a>
+              <a class="nav-link" href="#">Galerie</a>
+              <a class="nav-link" href="#">Kontakt</a>
+              <a class="nav-cta" href="#kontakt">Jetzt anfragen</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+   <section class="carousel">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="hero-slide">
+              <!-- Bild 1 (oben rechts) -->
+            
+              <!-- Bild 2 (Hauptbild rechts) -->
+              <img
+                src="./assets/eisspezialitaeten/Kein Titel (1024 x 1024 px).svg"
+                class="hero-img-main"
+                alt="Eisspezialität"
+              />
+
+              <!-- Bild 2 (Hauptbild rechts dahinter) -->
+              <img
+                src="./assets/Slider/Minze-768x2721.png"
+                class="hero-img-back"
+                alt="Minze"
+              />
+
+              <!-- Text -->
+              <div class="hero-caption">
+                <h1 class="hero-title">Milanos Eiszauber</h1>
+                <h2 class="hero-subtitle">Einfach lecker!</h2>
+                <p class="hero-text">
+                  Ein Leben ohne Eis ist möglich, aber sinnlos.<br />
+                  Die besten Eiscafés in Herzogenrath-Merkstein und
+                  Übach-Palenberg.
+                </p>
+                <a href="#" class="hero-btn">Jetzt entdecken</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+</body>
+</html>
