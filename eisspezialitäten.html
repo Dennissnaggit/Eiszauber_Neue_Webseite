@@ -1,23 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eisspezialitäten</title>
-     <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/Eispezialitäten/hero-eisspezialitäten.css">
+    <link rel="stylesheet" href="./css/sektion-carousel.css" />
+    <link rel="stylesheet" href="./css/opening.css" />
+    <link rel="stylesheet" href="./css/text-Info.css" />
+    <link rel="stylesheet" href="./css/angebot.css" />
+    <link rel="stylesheet" href="./css/galerie.css" />
+    <link rel="stylesheet" href="./css/torten.css" />
+    <link rel="stylesheet" href="./css/bewertung.css" />
+    <link rel="stylesheet" href="./css/team.css" />
+    <link rel="stylesheet" href="./css/kontaktformular.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script src="./js/opening.js"></script>
+    <script src="./js/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="./css/Eispezialitäten/hero-eisspezialitäten.css"
+    />
+    <link rel="stylesheet" href="./css/text-Info.css" />
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
     <header class="site-header">
       <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container navbar-container">
@@ -55,7 +72,7 @@
         </div>
       </nav>
     </header>
-   <section class="carousel">
+    <section class="carousel">
       <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
           <button
@@ -83,7 +100,7 @@
           <div class="carousel-item active">
             <div class="hero-slide">
               <!-- Bild 1 (oben rechts) -->
-            
+
               <!-- Bild 2 (Hauptbild rechts) -->
               <img
                 src="./assets/eisspezialitaeten/Kein Titel (1024 x 1024 px).svg"
@@ -101,7 +118,7 @@
               <!-- Text -->
               <div class="hero-caption">
                 <h1 class="hero-title">Milanos Eiszauber</h1>
-                <h2 class="hero-subtitle">Einfach lecker!</h2>
+                <h2 class="hero-subtitle">Eisspezialitäten</h2>
                 <p class="hero-text">
                   Ein Leben ohne Eis ist möglich, aber sinnlos.<br />
                   Die besten Eiscafés in Herzogenrath-Merkstein und
@@ -132,5 +149,332 @@
         </button>
       </div>
     </section>
-</body>
+    <section class="text-info">
+      <img
+        src="./assets/text-Info/Eis-Schale.jpg"
+        class="text-bg-img"
+        alt="Eis"
+      />
+
+      <div class="text-info-inner">
+        <h4 class="text-label">
+          Von den zeitlosen Klassikern wie Schoko-Banane bis hin zu
+          ausgefallenen, neuen Kreationen – bei uns findet jeder Eisliebhaber
+          seinen ganz persönlichen Lieblingsmoment.
+        </h4>
+        <h2 class="text-title">Milanos Eiszauber</h2>
+        <p class="text-description">
+          Unser Eis vereint Tradition und Kreativität: Klassische Sorten werden
+          in unserer eigenen Manufaktur mit viel Sorgfalt und ausgewählten
+          Zutaten frisch hergestellt, während wir gleichzeitig immer wieder
+          neue, überraschende Kreationen entwickeln. So entsteht eine Vielfalt,
+          die sich stetig verändert – und bei jedem Besuch aufs Neue begeistert.
+        </p>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery-header">
+          <p class="section-label">Unsere Auswahl</p>
+          <h2>Einblicke in unsere Klassiker</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="./assets/eisspezialitaeten/VanilleEis.png"
+              alt="Vanille Eis"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assets/eisspezialitaeten/schokoEis.png"
+              alt="Schokoladen Eis"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assets/eisspezialitaeten/erdbeerEis.png"
+              alt="Erdbeer Eis"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assets/eisspezialitaeten/bananenEis.png"
+              alt="Bananen Eis"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assets/eisspezialitaeten/pistazienEis.png"
+              alt="Pistazien Eis"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assets/eisspezialitaeten/straziatellaEis.png"
+              alt="Straziatella Eis"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="text-info">
+      <img
+        src="./assets/text-Info/Eis-Schale.jpg"
+        class="text-bg-img"
+        alt="Eis"
+      />
+
+      <div class="text-info-inner">
+        <h4 class="text-label">Kreative Eis-Momente aus eigener Herstellung</h4>
+        <h2 class="text-title">Milanos Eiszauber</h2>
+        <p class="text-description">
+          Natürlich kreieren wir aus unserem hausgemachten Eis immer wieder
+          neue, besondere Genussmomente. Mit viel Leidenschaft und hochwertigen
+          Zutaten entstehen einzigartige Kombinationen, die klassischen
+          Geschmack neu interpretieren und jeden Besuch zu etwas Besonderem
+          machen.
+        </p>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery-header">
+          <p class="section-label">Unsere Auswahl an</p>
+          <h2>Den Leckersten Eiskreationen</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="./assets/Galerie/2Amaretto-Becher.png"
+              alt="Vanille Eis"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assets/Galerie/Cookies Becher.png"
+              alt="Schokoladen Eis"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assets/Galerie/Frucht Becher.png"
+              alt="Erdbeer Eis"
+            />
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="kontaktformular" id="kontakt">
+      <div class="container">
+        <div class="kontaktformular-header">
+          <p class="section-label">Wir freuen uns auf Ihre Anfrage</p>
+          <h2>Kontakt aufnehmen</h2>
+          <p class="section-text">
+            Sie planen eine Bestellung oder ein Event? Senden Sie uns Ihre
+            Anfrage bequem über das Formular. Wir melden uns schnellstmöglich
+            bei Ihnen zurück.
+          </p>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="vorname">Vorname <span>*</span></label>
+              <input type="text" id="vorname" name="vorname" required />
+            </div>
+
+            <div class="form-group">
+              <label for="nachname">Nachname <span>*</span></label>
+              <input type="text" id="nachname" name="nachname" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-Mail <span>*</span></label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="telefon">Telefon <span>*</span></label>
+              <input type="tel" id="telefon" name="telefon" required />
+            </div>
+
+            <div class="form-group">
+              <label for="veranstaltungsort"
+                >Veranstaltungsort <span>*</span></label
+              >
+              <input
+                type="text"
+                id="veranstaltungsort"
+                name="veranstaltungsort"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="personenanzahl">Personen Anzahl <span>*</span></label>
+              <input
+                type="number"
+                id="personenanzahl"
+                name="personenanzahl"
+                min="1"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-options-grid">
+            <div class="form-option-box">
+              <p class="option-title">Art der Anfrage <span>*</span></p>
+              <div class="option-list">
+                <label class="custom-option">
+                  <input
+                    type="radio"
+                    name="lieferart"
+                    value="Selbstabholer"
+                    required
+                  />
+                  <span>Selbstabholer</span>
+                </label>
+
+                <label class="custom-option">
+                  <input
+                    type="radio"
+                    name="lieferart"
+                    value="Transport"
+                    required
+                  />
+                  <span>Transport</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-option-box">
+              <p class="option-title">Thema <span>*</span></p>
+              <div class="option-list option-list-wrap">
+                <label class="custom-option">
+                  <input
+                    type="radio"
+                    name="thema"
+                    value="Allgemeines"
+                    required
+                  />
+                  <span>Allgemeines</span>
+                </label>
+
+                <label class="custom-option">
+                  <input type="radio" name="thema" value="Eistorten" required />
+                  <span>Eistorten</span>
+                </label>
+
+                <label class="custom-option">
+                  <input type="radio" name="thema" value="Eiswagen" required />
+                  <span>Eiswagen</span>
+                </label>
+
+                <label class="custom-option">
+                  <input
+                    type="radio"
+                    name="thema"
+                    value="Eisthekenverleih"
+                    required
+                  />
+                  <span>Eisthekenverleih</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group form-group-full">
+            <label for="nachricht">Nachricht</label>
+            <textarea
+              id="nachricht"
+              name="nachricht"
+              rows="6"
+              placeholder="Schreiben Sie uns hier Ihre Nachricht ..."
+            ></textarea>
+          </div>
+
+          <div class="form-footer">
+            <label class="privacy-check">
+              <input type="checkbox" name="datenschutz" required />
+              <span>
+                Ich habe die Datenschutzhinweise gelesen und stimme der
+                Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu.
+                <span>*</span>
+              </span>
+            </label>
+
+            <p class="privacy-note">
+              Pflichtfelder sind mit <span>*</span> gekennzeichnet.
+            </p>
+
+            <button type="submit" class="contact-submit-btn">
+              Anfrage abschicken
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img
+        src="./assets/footer/Milanos-Logo-weiss.svg"
+        alt="Milanos Logo"
+        class="footer-logo"
+      />
+      <p class="footer-brand-text">
+        Ein Leben ohne Eis ist möglich, aber sinnlos.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Merkstein</h3>
+      <p><strong>Telefon:</strong> <a href="tel:024066677117">02406 6677117</a></p>
+      <p><strong>Standort:</strong> August-Schmidt-Platz 17<br />52134 Herzogenrath-Merkstein</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Übach-Palenberg</h3>
+      <p><strong>Telefon:</strong> <a href="tel:024519155018">02451 9155018</a></p>
+      <p><strong>Standort:</strong> Em Koddes 4<br />52531 Übach-Palenberg</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Rechtliches</h3>
+      <nav class="footer-links">
+        <a href="#impressum">Impressum</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </nav>
+    </div>
+
+    <div class="footer-column">
+      <h3>Social Media</h3>
+      <div class="footer-socials">
+        <a href="#" aria-label="Facebook" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07C2 17.1 5.66 21.27 10.44 22v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.92 3.78-3.92 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.44 2.9h-2.34V22C18.34 21.27 22 17.1 22 12.07z"/>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="Instagram" class="social-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 Milanos. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
+</footer>
+  </body>
 </html>
