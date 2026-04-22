@@ -1,0 +1,21 @@
+.infoTorten {
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 60px auto;
+    padding: 0 40px;
+    gap: 40px;
+}
+.infoTortenRechts {
+    flex: 1;
+}
+.infoTortenLinks {
+    flex: 1;
+}
+@media (max-width: 991px) {
+    .infoTorten {
+        flex-direction: column;
+    }
+}
