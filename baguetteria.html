@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eistorten</title>
+    <link rel="shortcut icon" href="./assets/favicon/cropped-Favicon-Milanos-Eiszauber-32x32.png" type="image/x-icon">
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
@@ -18,18 +20,23 @@
     <link rel="stylesheet" href="./css/bewertung.css" />
     <link rel="stylesheet" href="./css/team.css" />
     <link rel="stylesheet" href="./css/kontaktformular.css" />
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/eitorten.css">
     <script src="./js/opening.js"></script>
     <script src="./js/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="./css/Eispezialitäten/hero-eisspezialitäten.css"
+    />
+    <link rel="stylesheet" href="./css/text-Info.css" />
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Eiszauber</title>
-    <link rel="shortcut icon" href="./assets/favicon/cropped-Favicon-Milanos-Eiszauber-32x32.png" type="image/x-icon">
+    <script src="./js/main.js"></script>
   </head>
-  <body onload="updateLocationStatus()">
+  <body>
     <header class="site-header">
       <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container navbar-container">
@@ -56,10 +63,10 @@
 
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto custom-nav">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link " aria-current="page" href="./index.html">Home</a>
               <a class="nav-link" href="./eisspezialitäten.html">Eisspezialitäten</a>
               <a class="nav-link" href="./eistorten.html">Eistorten</a>
-              <a class="nav-link" href="./baguetteria.html">Baguetteria</a>
+              <a class="nav-link active" href="./baguetteria.html">Baguetteria</a>
               <a class="nav-link" href="#">Eiswagenverleih</a>
               <a class="nav-cta" href="#kontakt">Jetzt anfragen</a>
             </div>
@@ -95,18 +102,17 @@
           <div class="carousel-item active">
             <div class="hero-slide">
               <!-- Bild 1 (oben rechts) -->
-           
 
               <!-- Bild 2 (Hauptbild rechts) -->
               <img
-                src="./assets/eisspezialitaeten/Kein Titel (1024 x 1024 px).svg"
+                src="./assets/baguetteria/Bagels alle 4 von oben.png"
                 class="hero-img-main"
-                alt="Schokoladeneis"
+                alt="Eisspezialität"
               />
 
               <!-- Bild 2 (Hauptbild rechts dahinter) -->
               <img
-                src="./assets/Slider/Minze-768x2721.png"
+                src="./assets/eistorte_seite/erdbeeren.png"
                 class="hero-img-back"
                 alt="Minze"
               />
@@ -114,13 +120,12 @@
               <!-- Text -->
               <div class="hero-caption">
                 <h1 class="hero-title">Milanos Eiszauber</h1>
-                <h2 class="hero-subtitle">Einfach lecker!</h2>
+                <h2 class="hero-subtitle">Baguetteria</h2>
                 <p class="hero-text">
-                  Ein Leben ohne Eis ist möglich, aber sinnlos.<br />
-                  Die besten Eiscafés in Herzogenrath-Merkstein und
-                  Übach-Palenberg.
+                  In unserer Baguetteria trifft knuspriges, goldbraun gebackenes Brot auf ausgewählte Zutaten und echte Handwerkskunst. Ob herzhaft, mediterran oder klassisch – jedes Baguette wird bei Milanos Eiszauber frisch für dich zubereitet und überzeugt mit Qualität, Geschmack und Liebe zum Detail.
+Der perfekte Genuss für zwischendurch – leicht, frisch und einfach unwiderstehlich.
                 </p>
-                <a href="#" class="btn-primary">Jetzt entdecken</a>
+                <a href="#" class="hero-btn">Jetzt entdecken</a>
               </div>
             </div>
           </div>
@@ -145,107 +150,6 @@
         </button>
       </div>
     </section>
-    <section class="opening-hours-section">
-      <div class="container">
-        <div class="opening-hours-header">
-          <p class="section-label">Besuchen Sie uns</p>
-          <h2>Unsere Öffnungszeiten</h2>
-          <p class="section-text">
-            Entdecken Sie unsere beiden Standorte und sehen Sie sofort, ob wir
-            gerade für Sie geöffnet haben.
-          </p>
-        </div>
-
-        <div class="locations-grid">
-          <!-- Standort 1 -->
-          <div class="location-card" id="location-merkstein">
-            <div class="location-status" data-status>Wird geprüft ...</div>
-
-            <h3>Herzogenrath-Merkstein</h3>
-            <p class="location-address">
-              August-Schmidt-Platz 17a<br />
-              52134 Herzogenrath
-            </p>
-
-            <p class="location-note" data-note>
-              Öffnungszeiten werden geladen ...
-            </p>
-
-            <ul class="hours-list">
-              <li><span>Montag</span><span>Ruhetag</span></li>
-              <li><span>Dienstag</span><span>08:30 – 19:00</span></li>
-              <li><span>Mittwoch</span><span>08:30 – 19:00</span></li>
-              <li><span>Donnerstag</span><span>08:30 – 19:00</span></li>
-              <li><span>Freitag</span><span>08:30 – 19:00</span></li>
-              <li><span>Samstag</span><span>08:30 – 19:00</span></li>
-              <li><span>Sonntag</span><span>08:30 – 19:00</span></li>
-            </ul>
-
-            <div class="location-actions">
-              <a
-                href="https://maps.app.goo.gl/NVX27M8mkUG9817N7"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-location"
-              >
-                Route planen
-              </a>
-
-              <a
-                href="/assets/speisekarte/MilanoEiskarte.pdf"
-                target="_blank"
-                class="btn-menu"
-              >
-                Speisekarte ansehen
-              </a>
-            </div>
-          </div>
-
-          <!-- Standort 2 -->
-          <div class="location-card" id="location-uebach">
-            <div class="location-status" data-status>Wird geprüft ...</div>
-
-            <h3>Übach-Palenberg</h3>
-            <p class="location-address">
-              Musterweg 8<br />
-              52531 Übach-Palenberg
-            </p>
-
-            <p class="location-note" data-note>
-              Öffnungszeiten werden geladen ...
-            </p>
-
-            <ul class="hours-list">
-              <li><span>Montag</span><span>Ruhetag</span></li>
-              <li><span>Dienstag</span><span>Ruhetag</span></li>
-              <li><span>Mittwoch</span><span>12:00 – 20:00</span></li>
-              <li><span>Donnerstag</span><span>12:00 – 20:00</span></li>
-              <li><span>Freitag</span><span>12:00 – 20:00</span></li>
-              <li><span>Samstag</span><span>12:00 – 20:00</span></li>
-              <li><span>Sonntag</span><span>12:00 – 20:00</span></li>
-            </ul>
-
-            <div class="location-actions">
-              <a
-                href="https://maps.app.goo.gl/ckkm4SrNa5uScYNw5"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-location"
-              >
-                Route planen
-              </a>
-               <a
-                href="/assets/speisekarte/MilanoEiskarteUebach.pdf"
-                target="_blank"
-                class="btn-menu"
-              >
-                Speisekarte ansehen
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="text-info">
       <img
         src="./assets/text-Info/Eis-Schale.jpg"
@@ -254,111 +158,53 @@
       />
 
       <div class="text-info-inner">
-        <h4 class="text-label">Ein Leben ohne Eis ist möglich, aber sinnlos</h4>
+        <h4 class="text-label">
+         Frisch belegt. Mit Liebe gemacht.
+        </h4>
         <h2 class="text-title">Milanos Eiszauber</h2>
         <p class="text-description">
-          Ein Leben ohne Eis ist möglich, aber sinnlos! Vom leckeren Frühstück
-          bis zum klassischen Eisbecher – die beliebten Eiscafés in
-          Herzogenrath-Merkstein und Übach-Palenberg heißen Milanos Eiszauber.
-          Wir produzieren unser eigenes Eis und traumhafte Eistorten. Holen Sie
-          unser Eis zu sich nach Hause: Wir verleihen auch Eistheken und
-          Eiswagen.
+          In unserer Baguetteria trifft knuspriges, goldbraun gebackenes Brot auf ausgewählte Zutaten und echte Handwerkskunst. Ob herzhaft, mediterran oder klassisch – jedes Baguette wird bei Milanos Eiszauber frisch für dich zubereitet und überzeugt mit Qualität, Geschmack und Liebe zum Detail.
+Der perfekte Genuss für zwischendurch – leicht, frisch und einfach unwiderstehlich.
         </p>
       </div>
     </section>
-    <section class="angebot" id="angebot">
-      <div class="angebot-inner container">
-        <div class="angebot-card">
-          <img src="./assets/Angebote/Eisbecher-Milanos.svg" alt="Eisbecher" />
-          <h2>Eisspezialitäten</h2>
-          <p>
-            Genießen Sie unsere üppigen Eisbecher: Sie haben die Wahl zwischen
-            klassischen und kreativen Eissorten.
-          </p>
-          <a href="./eisspezialitäten.html" class="angebot-btn">Weiterlesen</a>
-        </div>
-
-        <div class="angebot-card">
-          <img src="./assets/Angebote/Eistorte-Milanos.svg" alt="Eistorte" />
-          <h2>Eistorten</h2>
-          <p>
-            Bestellen Sie eine traumhafte Eistorte für einen besonderen Anlass.
-            Wir dekorieren mit Fondant und Esspapier.
-          </p>
-          <a href="./eistorten.html" class="angebot-btn">Weiterlesen</a>
-        </div>
-
-        <div class="angebot-card">
-          <img src="./assets/Angebote/Baguette-Milanos.svg" alt="Baguetteria" />
-          <h2>Baguetteria</h2>
-          <p>
-            Mehr als nur Eis: In Merkstein können Sie auch frühstücken und
-            belegte Baguettes oder warme Speisen bestellen.
-          </p>
-          <a href="#" class="angebot-btn">Weiterlesen</a>
-        </div>
-
-        <div class="angebot-card">
-          <img
-            src="./assets/Angebote/Eiswagen-Milanos.svg"
-            alt="Eiswagenverleih"
-          />
-          <h2>Eiswagenverleih</h2>
-          <p>
-            Unser leckeres Eis für Ihr Event? Kein Problem! Wir bringen unseren
-            mobilen Eiswagen direkt vor Ihre Tür.
-          </p>
-          <a href="#" class="angebot-btn">Weiterlesen</a>
-        </div>
-      </div>
-    </section>
-    <section class="gallery">
+     <section class="gallery">
       <div class="container">
         <div class="gallery-header">
-          <p class="section-label">Unsere Auswahl</p>
-          <h2>Einblicke in unsere Eiskreationen</h2>
+          <p class="section-label">Unsere Auswahl an</p>
+          <h2>Den Leckersten Snacks</h2>
         </div>
 
         <div class="gallery-grid">
           <div class="gallery-item">
             <img
-              src="./assets/Galerie/2Amaretto-Becher.png"
-              alt="Amaretto Becher"
+              src="./assets/baguetteria/Brie Bagel 2.png"
+              alt="lecker belegter Brie Bagel"
             />
-          </div>
-          <div class="gallery-item">
-            <img src="./assets/Galerie/Frucht Becher.png" alt="FruchtBecher" />
           </div>
           <div class="gallery-item">
             <img
-              src="./assets/Galerie/Cookies Becher.png"
-              alt="Cookie Becher"
+              src="./assets/baguetteria/frühstück für 2.png"
+              alt="Frühstück für zwei Personen"
             />
-          </div>
-          <div class="gallery-item">
-            <img src="./assets/Galerie/Brie Bagel.png" alt="Brie-Bagel" />
           </div>
           <div class="gallery-item">
             <img
-              src="./assets/Galerie/gesundes Frühstück.png"
-              alt="Gesundes Frühstück"
+              src="./assets/baguetteria/Herzhafter Crepe.png"
+              alt="Herzhafter Crepe"
             />
           </div>
-          <div class="gallery-item">
-            <img src="./assets/Galerie/Waffel.png" alt="Waffel" />
           </div>
         </div>
       </div>
     </section>
     <section class="torten">
       <div class="text-info-inner">
-        <h4 class="text-label">Diese Überraschung gelingt wirklich immer!</h4>
-        <h2 class="text-title">Traumhafte Eistorten</h2>
+        <h4 class="text-label">Auch Morgens gibt es bei uns für jeden etwas!</h4>
+        <h2 class="text-title">Perfekt in den Tag starten</h2>
         <p class="text-description">
-          In unserer Eismanufaktur zaubern wir Ihre individuelle Eistorte.
-          Lassen Sie sich inspirieren! Sie haben die Wahl zwischen verschiedenen
-          Formen und bis zu drei Etagen. Wir verwenden hochwertiges Fondant für
-          Schrift oder Figuren und können auch Esspapier bedrucken.
+          Genieße bei Milanos Eiszauber ein Frühstück, das mehr ist als nur eine Mahlzeit. Frisch belegte Brötchen, aromatischer Kaffee und ausgewählte Zutaten sorgen für einen genussvollen Start in den Tag.
+Ob entspannt am Morgen oder als kleine Auszeit zwischendurch – bei uns wird Frühstück zu einem Moment, den man gerne länger genießt.
         </p>
       </div>
 
@@ -371,19 +217,17 @@
               alt="Erdbeere"
             />
             <img
-              src="./assets/Eistorten/Eistorte-Erdbeere.png"
+              src="./assets/baguetteria/Joghurt mit Früchten.png"
               class="torten-front"
               alt="Erdbeer Eistorte"
             />
           </div>
 
           <div class="torten-card-body">
-            <h5 class="torten-title">Erdbeer Eistorte</h5>
+            <h5 class="torten-title">Frisch. Leicht. Joghurt.</h5>
             <p class="torten-text">
-              Fruchtig, cremig und perfekt für besondere Anlässe – unsere
-              Erdbeer Eistorte ist ein echter Hingucker.
+             Cremiger Joghurt trifft auf frische Früchte und knusprige Toppings – der perfekte, leichte Start in den Tag. Gesund, lecker und einfach zum Genießen.
             </p>
-            <a href="#" class="torten-btn">Mehr erfahren</a>
           </div>
         </div>
 
@@ -395,19 +239,17 @@
               alt="Cookie"
             />
             <img
-              src="./assets/Eistorten/Eistorte-Schoko.png"
+              src="./assets/baguetteria/Tee Frühstück Produkt Bild mit KIpng.png"
               class="torten-front"
-              alt="Schoko Eistorte"
+              alt="Frühstück für zwei"
             />
           </div>
 
           <div class="torten-card-body">
-            <h5 class="torten-title">Cookie Eistorte</h5>
+            <h5 class="torten-title">Gemeinsam genießen</h5>
             <p class="torten-text">
-              Schokoladig, intensiv und besonders beliebt – ideal für alle, die
-              kräftige Aromen lieben.
+              Ein herzhaftes Frühstück für zwei, liebevoll angerichtet mit frischen Zutaten und begleitet von aromatischem Tee. Perfekt, um den Morgen entspannt zu beginnen und besondere Momente zu teilen.
             </p>
-            <a href="#" class="torten-btn">Mehr erfahren</a>
           </div>
         </div>
 
@@ -419,114 +261,27 @@
               alt="Himbeere"
             />
             <img
-              src="./assets/Eistorten/Eistorte-Beeren.png"
+              src="./assets/baguetteria/Waffel.png"
               class="torten-front"
               alt="Beeren Eistorte"
             />
           </div>
 
           <div class="torten-card-body">
-            <h5 class="torten-title">Beeren Eistorte</h5>
+            <h5 class="torten-title">Süße Auszeit</h5>
             <p class="torten-text">
-              Frisch, leicht und sommerlich – mit Beerennoten und liebevoller
-              Dekoration für jeden Anlass.
-            </p>
-            <a href="#" class="torten-btn">Mehr erfahren</a>
+              Goldbraun gebackene Waffel, verfeinert mit süßen Toppings – ein Genussmoment, der auf der Zunge zergeht. Perfekt für alle, die sich zwischendurch etwas Besonderes gönnen möchten.
           </div>
         </div>
       </div>
     </section>
-    <section class="bewertung">
-      <div class="container">
-        <div class="bewertung-header">
-          <h3>Milanos Eiszauber freut sich über:</h3>
-          <h2>Beste Bewertungen</h2>
-          <p class="rating-overall">⭐ 4.8 / 5 bei Google</p>
-        </div>
-
-        <div class="bewertung-grid">
-          <div class="bewertung-card">
-            <div class="bewertung-top">
-              <strong>Max Mustermann</strong>
-              <span class="google-icon">G</span>
-            </div>
-
-            <div class="stars">★★★★★</div>
-
-            <p>
-              Absolut bestes Eis in der Region! Super freundliches Personal und
-              tolle Auswahl.
-            </p>
-          </div>
-
-          <div class="bewertung-card">
-            <div class="bewertung-top">
-              <strong>Anna Becker</strong>
-              <span class="google-icon">G</span>
-            </div>
-
-            <div class="stars">★★★★★</div>
-
-            <p>Die Eistorten sind der Hammer! Perfekt für Geburtstage.</p>
-          </div>
-
-          <div class="bewertung-card">
-            <div class="bewertung-top">
-              <strong>Jonas Klein</strong>
-              <span class="google-icon">G</span>
-            </div>
-
-            <div class="stars">★★★★★</div>
-
-            <p>Mega Auswahl und richtig gute Qualität. Komme immer wieder!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="team">
-      <div class="container">
-        <div class="team-header">
-          <h4 class="text-label">Die Gesichter hinter Milanos Eiszauber</h4>
-          <h2 class="text-title">Unser Team</h2>
-          <p class="text-description">
-            Wir von Milanos Eiszauber führen unsere Eisdielen in
-            Herzogenrath-Merkstein und Übach-Palenberg in langjähriger
-            Tradition. Unser Eis produzieren wir täglich frisch in der eigenen
-            Eismanufaktur: Unsere Mitarbeiter lieben es, mit Eis zu zaubern!
-          </p>
-        </div>
-
-        <div class="team-grid">
-          <div class="team-card">
-            <div class="team-img">
-              <img src="./assets/Team/Waliczek.jpg" alt="Daniela Waliczek" />
-            </div>
-            <div class="team-info">
-              <p>Inhaberin & Eiszauberin</p>
-              <h3>Daniela</h3>
-            </div>
-          </div>
-
-          <div class="team-card">
-            <div class="team-img">
-              <img src="./assets/Team/Renee-Artz.jpg" alt="Rene Artz" />
-            </div>
-            <div class="team-info">
-              <p>Chef der Eismanufaktur</p>
-              <h3>Rene</h3>
-            </div>
-          </div>
-
-          <div class="team-card">
-            <div class="team-img">
-              <img src="./assets/Team/Milanos-Artur.jpg" alt="Artur" />
-            </div>
-            <div class="team-info">
-              <p>Service Merkstein</p>
-              <h3>Artur</h3>
-            </div>
-          </div>
-        </div>
+    <section class="infoTorten">
+      <div class="infoTortenLinks">
+      <img src="./assets/baguetteria/kaffeeMaschine.png" class="img-fluid" alt="..."></div>
+      <div class="infoTortenRechts">
+        <h2>Kaffee auf höchstem Niveau</h2>
+        <p class="text-description">WBei Milanos Eiszauber genießt du den besten Kaffee der Stadt – frisch zubereitet mit modernsten, professionellen Kaffeemaschinen und viel Leidenschaft. Jede Tasse überzeugt durch intensives Aroma, perfekte Crema und echten Barista-Genuss.</p>
+<img src="./assets/eistorte_seite/Unterschrift-DAW.png" alt="unterschrift Daniela Waliczek">
       </div>
     </section>
     <section class="kontaktformular" id="kontakt">
