@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Startseite & Kontakt → beide auf neue Startseite
+RewriteRule ^$ /index.html [R=301,L]
+RewriteRule ^kontakt/?$ /index.html [R=301,L]
+
+# Standorte → jetzt auf Startseite (weil integriert)
+RewriteRule ^standorte/uebach-palenberg/?$ /index.html [R=301,L]
+RewriteRule ^standorte/merkstein/?$ /index.html [R=301,L]
+
+# Leistungen → direkte Weiterleitung
+RewriteRule ^eiswagenverleih/?$ /eiswagenverleih.html [R=301,L]
+RewriteRule ^eistorten/?$ /eistorten.html [R=301,L]
