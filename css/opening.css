@@ -186,7 +186,27 @@
   flex-direction: column;
   gap: 12px;
 }
+.toGoMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap; /* sorgt dafür, dass es auf kleinen Screens umbrechen kann */
+}
+.toGo {
+  padding: 8px 14px;
+  margin-bottom: 15px;
 
+  background-color: #fff8f0;
+  border: 2px solid #ffb347;
+  border-radius: 999px; /* gleiche Form wie location-status */
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+
+  white-space: nowrap;
+}
 @media (min-width: 768px) {
   .location-actions {
     flex-direction: row;
